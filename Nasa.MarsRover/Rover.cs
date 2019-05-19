@@ -7,6 +7,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover
 {
+    /// <summary>
+    /// Represents a rover exposing present Position and Direction of the rover
+    /// </summary>
     public class Rover : IRover
     {
         public Point Position { get; private set; }
@@ -56,7 +59,12 @@ namespace Nasa.MarsRover
                 {Direction.West, ForwardWest}
             };
         }
-
+        /// <summary>
+        /// Deploys rover on passed position and direction.If deployment not possible throws exception
+        /// </summary>
+        /// <param name="position">Position to put the rover on</param>
+        /// <param name="direction">Initial direction of the rover</param>
+        /// <param name="plateau">Plateau on which to deploy the rover</param>
         public void Deploy(Point position, Direction direction, ILandingPlateau plateau)
         {
             if (plateau.IsValidPoint(position))
@@ -72,6 +80,10 @@ namespace Nasa.MarsRover
             }
         }
 
+        /// <summary>
+        /// Moves the Rover based on the list of movements passed
+        /// </summary>
+        /// <param name="movements">List of movements to be allowed</param>
         public void Move(IReadOnlyList<Movement> movements)
         {
             Check.NotNull(movements, nameof(movements));

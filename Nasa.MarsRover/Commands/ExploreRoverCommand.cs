@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Nasa.MarsRover.Exceptions;
 using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.Commands
 {
+    /// <summary>
+    /// Represents ExploreRoverCommand
+    /// </summary>
     public class ExploreRoverCommand : ISetRover
     {
         public IReadOnlyList<Movement> Movements { get; }
@@ -17,6 +21,11 @@ namespace Nasa.MarsRover.Commands
 
         public void Execute()
         {
+            if (_rover == null)
+            {
+                throw new ExploreRoverException($"Set Rover-{_rover} properly");
+            }
+
             _rover.Move(Movements);
         }
 
@@ -25,11 +34,6 @@ namespace Nasa.MarsRover.Commands
             Check.NotNull(rover, nameof(rover));
 
             _rover = rover;
-        }
-
-        public void SetPlateau(ILandingPlateau plateau)
-        {
-            throw new NotImplementedException();
         }
     }
 }

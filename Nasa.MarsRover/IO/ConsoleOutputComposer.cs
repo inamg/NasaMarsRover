@@ -6,6 +6,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.IO
 {
+    /// <summary>
+    /// Formats the output for console
+    /// </summary>
     public class ConsoleOutputComposer : IOutputComposer
     {
         public string Compose(IEnumerable<IRover> rovers)

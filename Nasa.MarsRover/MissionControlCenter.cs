@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using Nasa.MarsRover.Commands;
 using Nasa.MarsRover.IO;
 using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover
 {
+    /// <summary>
+    /// MissionControllerCenter class executes commands from input
+    /// </summary>
     public class MissionControlCenter : IMissionControlCenter
     {
         private readonly IInputParser _commandParser;
@@ -16,7 +17,6 @@ namespace Nasa.MarsRover
 
         private readonly ILandingPlateau _plateau;
 
-        private readonly IOutputComposer _outputComposer;
         public MissionControlCenter(IInputParser commandParser, 
             ILandingPlateau landingPlateau)
         {
@@ -28,6 +28,11 @@ namespace Nasa.MarsRover
             _plateau = landingPlateau;
         }
 
+        /// <summary>
+        /// Parses and executes the commands pass as string
+        /// </summary>
+        /// <param name="commandStrings">Multiple commands as string</param>
+        /// <returns>List of rovers</returns>
         public IEnumerable<IRover> ExecuteCommand(string commandStrings)
         {
             Check.NotNullOrEmpty(commandStrings, nameof(commandStrings));

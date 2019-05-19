@@ -5,6 +5,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.Commands
 {
+    /// <summary>
+    /// Parses string in to SetupPlateauCommand
+    /// </summary>
     public class SetupPlateauCommandParser : ICommandParser
     {
         public ICommand Parse(string commandString)

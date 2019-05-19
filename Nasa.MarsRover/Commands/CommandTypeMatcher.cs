@@ -7,6 +7,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.Commands
 {
+    /// <summary>
+    /// Matches the commands based on regex.
+    /// </summary>
     public class CommandTypeMatcher : ICommandTypeMatcher
     {
         private readonly IDictionary<string, CommandType> _commandTypeRegexs;
@@ -21,6 +24,11 @@ namespace Nasa.MarsRover.Commands
             };
         }
 
+        /// <summary>
+        /// Returns the matched CommandType
+        /// </summary>
+        /// <param name="command">Command string</param>
+        /// <returns>CommandType enum</returns>
         public CommandType GetCommandType(string command)
         {
             Check.NotNullOrEmpty(command, nameof(command));

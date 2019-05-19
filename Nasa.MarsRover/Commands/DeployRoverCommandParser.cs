@@ -5,6 +5,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.Commands
 {
+    /// <summary>
+    /// Parses the command and returns appropriate domain object
+    /// </summary>
     public class DeployRoverCommandParser : ICommandParser
     {
         public ICommand Parse(string commandString)

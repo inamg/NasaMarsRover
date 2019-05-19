@@ -5,6 +5,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.IO
 {
+    /// <summary>
+    /// Parses the input command
+    /// </summary>
     public class InputCommandParser : IInputParser
     {
         private readonly ICommandTypeMatcher _commandTypeMatcher;

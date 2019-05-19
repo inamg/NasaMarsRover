@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Drawing;
+using Nasa.MarsRover.Exceptions;
 using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.Commands
 {
+    /// <summary>
+    /// Represents SetupPlateauCommand
+    /// </summary>
     public class SetupPlateauCommand : ISetPlateau
     {
         private readonly Size _size;
@@ -30,6 +34,11 @@ namespace Nasa.MarsRover.Commands
 
         public void Execute()
         {
+            if (_plateau == null)
+            {
+                throw new SetupPlateauCommandException($"Set Rover-{_plateau} properly");
+            }
+
             _plateau.SetSize(_size);
         }
     }

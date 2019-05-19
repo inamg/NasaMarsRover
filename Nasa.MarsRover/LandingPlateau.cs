@@ -3,6 +3,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover
 {
+    /// <summary>
+    /// Represents a plateau, exposing Size of the plateau
+    /// </summary>
     public class LandingPlateau : ILandingPlateau
     {
         public Size Size { get; private set; }
@@ -13,6 +16,11 @@ namespace Nasa.MarsRover
             Size = size;
         }
 
+        /// <summary>
+        /// Checks if the point is valid.
+        /// </summary>
+        /// <param name="point">Point to be checked</param>
+        /// <returns>true or false</returns>
         public bool IsValidPoint(Point point)
         {
             var isValidX = point.X >= 0 && point.X <= Size.Width;

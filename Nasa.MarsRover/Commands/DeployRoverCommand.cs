@@ -4,6 +4,9 @@ using Nasa.MarsRover.Validators;
 
 namespace Nasa.MarsRover.Commands
 {
+    /// <summary>
+    /// Represents DeployRoverCommand
+    /// </summary>
     public class DeployRoverCommand : ISetRover, ISetPlateau
     {
         private readonly Point _position;
