@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nasa.MarsRover", "Nasa.MarsRover\Nasa.MarsRover.csproj", "{A0B6A352-1C5B-4F9F-BBC0-D55B9B352AE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nasa.MarsRover.ConsoleApp", "Nasa.MarsRover.ConsoleApp\Nasa.MarsRover.ConsoleApp.csproj", "{92CFE2A3-6359-4B6D-86AD-84ED0DE69990}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nasa.MarsRover.Tests", "Nasa.MarsRover.Tests\Nasa.MarsRover.Tests.csproj", "{02358F95-DBE5-46DF-B593-522AE5F5EC8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nasa.MarsRover.IntegrationTests", "Nasa.MarsRover.IntegrationTests\Nasa.MarsRover.IntegrationTests.csproj", "{0602768B-A7D0-4DBD-A97E-0A7E79826B9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0B6A352-1C5B-4F9F-BBC0-D55B9B352AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B6A352-1C5B-4F9F-BBC0-D55B9B352AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B6A352-1C5B-4F9F-BBC0-D55B9B352AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B6A352-1C5B-4F9F-BBC0-D55B9B352AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92CFE2A3-6359-4B6D-86AD-84ED0DE69990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92CFE2A3-6359-4B6D-86AD-84ED0DE69990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92CFE2A3-6359-4B6D-86AD-84ED0DE69990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92CFE2A3-6359-4B6D-86AD-84ED0DE69990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02358F95-DBE5-46DF-B593-522AE5F5EC8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02358F95-DBE5-46DF-B593-522AE5F5EC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02358F95-DBE5-46DF-B593-522AE5F5EC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02358F95-DBE5-46DF-B593-522AE5F5EC8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0602768B-A7D0-4DBD-A97E-0A7E79826B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0602768B-A7D0-4DBD-A97E-0A7E79826B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0602768B-A7D0-4DBD-A97E-0A7E79826B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0602768B-A7D0-4DBD-A97E-0A7E79826B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E9DB0E3-4370-4F11-95EB-F7481EED3FF2}
+	EndGlobalSection
+EndGlobal
