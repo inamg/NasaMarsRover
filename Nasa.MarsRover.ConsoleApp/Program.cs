@@ -3,6 +3,7 @@ using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Nasa.MarsRover.Commands;
+using Nasa.MarsRover.Exceptions;
 using Nasa.MarsRover.IO;
 
 namespace Nasa.MarsRover.ConsoleApp
@@ -23,6 +24,16 @@ namespace Nasa.MarsRover.ConsoleApp
                 var rovers = missionControlCenter.ExecuteCommand(BuildCommandString());
 
                 Console.Write(outputComposer.Compose(rovers));
+            }
+            catch (DeployRoverException e)
+            {
+                Console.WriteLine("Couldn't deploy rover. Please check the logs.");
+                _logger.LogError(e.ToString());
+            }
+            catch (CommandParseException e)
+            {
+                Console.WriteLine("Couldn't parse command. Please check the logs.");
+                _logger.LogError(e.ToString());
             }
             catch (Exception e)
             {
