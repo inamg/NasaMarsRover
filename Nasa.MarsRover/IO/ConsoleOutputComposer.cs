@@ -27,6 +27,7 @@ namespace Nasa.MarsRover.IO
 
         private static string Compose(Point position, Direction direction)
         {
+            // get the description
             return $"{position.X} {position.Y} {direction.GetDescription()}";
         }
     }
